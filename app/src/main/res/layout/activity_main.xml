@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_image"
+        tools:context=".PersonalInfoActivity">
+>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/vuv_hr_image"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/textViewStudent"
+        android:layout_marginBottom="70dp"
+        />
+
+    <TextView
+        android:id="@+id/textViewStudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unesite ime i prezime studenta"
+        android:layout_above="@+id/editTextStudent"
+        android:layout_centerHorizontal="true"
+        />
+
+    <EditText
+        android:id="@+id/editTextStudent"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnStudent"
+        android:layout_centerHorizontal="true"
+         />
+
+    <Button
+        android:id="@+id/btnStudent"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Potvrdi"/>
+
+</RelativeLayout>

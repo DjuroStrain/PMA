@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    android:paddingRight ="16dp"
+    android:paddingLeft="16dp"
+    tools:context=".SummaryActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/vuv_hr_image"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/textViewKolegij"
+        android:layout_marginBottom="70dp"
+        />
+
+    <TextView
+        android:id="@+id/textViewImePrezime"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewKolegij"
+        android:layout_marginBottom="12dp"
+        android:text="Ime i prezime studenta :"
+        android:textSize="7pt" />
+
+    <TextView
+        android:id="@+id/textViewImePrez"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editTextKolegij2"
+        android:layout_marginBottom="16dp"
+        android:layout_toRightOf="@+id/textViewImePrezime"
+        android:textSize="7pt"
+        />
+
+    <TextView
+        android:id="@+id/textViewKolegij"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnPocetna"
+        android:text="Naziv kolegija :"
+        android:textSize="7pt"
+        android:layout_marginBottom="15dp"/>
+
+    <TextView
+        android:id="@+id/editTextKolegij2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnPocetna"
+        android:layout_toRightOf="@+id/textViewKolegij"
+        android:text=""
+        android:layout_marginBottom="15dp"
+        android:textSize="7pt"
+        />
+
+
+
+    <Button
+        android:id="@+id/btnPocetna"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Početna"
+        />
+
+</RelativeLayout>
