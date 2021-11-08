@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LV1_faks">
         <activity
+            android:name=".SummaryActivity"
+            android:exported="true" />
+        <activity
+            android:name=".StudentInfoActivity"
+            android:exported="true" />
+        <activity
             android:name=".PersonalInfoActivity"
             android:exported="true">
             <intent-filter>

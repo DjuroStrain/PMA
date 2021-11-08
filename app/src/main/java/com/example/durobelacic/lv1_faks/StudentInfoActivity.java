@@ -9,30 +9,44 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class StudentInfoActivity extends AppCompatActivity {
-    private EditText oInputKolegij;
-    private Button oBtnUpisi;
-    private String sImePrezime;
-    private String sKolegij;
+    private EditText oEditTextImeProf;
+    private EditText oEditTextAkadGod;
+    private EditText oEditTextBrojPred;
+    private EditText oEditTextBrojLV;
+    private Button oBtnDalje;
+    private String sIme;
+    private String sPrezime;
+    private String sDatum;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_info);
 
-        oInputKolegij = (EditText) findViewById(R.id.editTextKolegij);
-
         final Bundle oBundle = getIntent().getExtras();
-        sImePrezime = oBundle.getString("imePrezime");
+        sIme = oBundle.getString("ime");
+        sPrezime = oBundle.getString("prezime");
+        sDatum = oBundle.getString("datum");
 
-        oBtnUpisi = (Button) findViewById(R.id.btnUpisi);
-        oBtnUpisi.setOnClickListener(new View.OnClickListener() {
+        oEditTextImeProf = (EditText) findViewById(R.id.editTextImeProf);
+        oEditTextAkadGod = (EditText) findViewById(R.id.editTextAkadGod);
+        oEditTextBrojPred = (EditText) findViewById(R.id.editTextPred);
+        oEditTextBrojLV = (EditText) findViewById(R.id.editTextLv);
+
+        oBtnDalje = (Button) findViewById(R.id.btnDalje);
+        oBtnDalje.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sKolegij = oInputKolegij.getText().toString();
-                Intent oSummaryActivity = new Intent(getApplicationContext(), SummaryActivity.class);
-                oSummaryActivity.putExtra("imePrezime", sImePrezime);
-                oSummaryActivity.putExtra("kolegij", sKolegij);
-                startActivity(oSummaryActivity);
+                Intent oSummaryActivty = new Intent(getApplicationContext(), SummaryActivity.class);
+                oSummaryActivty.putExtra("ime", sIme);
+                oSummaryActivty.putExtra("prezime", sPrezime);
+                oSummaryActivty.putExtra("datum", sDatum);
+                oSummaryActivty.putExtra("imeProf", oEditTextImeProf.getText().toString());
+                oSummaryActivty.putExtra("akadGod", oEditTextAkadGod.getText().toString());
+                oSummaryActivty.putExtra("brojPred", oEditTextBrojPred.getText().toString());
+                oSummaryActivty.putExtra("brojLv", oEditTextBrojLV.getText().toString());
+                startActivity(oSummaryActivty);
             }
         });
     }

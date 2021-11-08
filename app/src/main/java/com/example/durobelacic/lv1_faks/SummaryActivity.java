@@ -9,34 +9,45 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class SummaryActivity extends AppCompatActivity {
-
-    private String sImePrezime;
-    private String sKolegij;
-    private TextView textViewImePrez;
-    private TextView textViewKolegij;
-    private Button btnPocetna;
+    private TextView viewImePrezime, viewDatum, viewImeProf, viewAkadGod, viewBrojPred, viewBrojLV;
+    private String sIme, sPrezime, sDatum, sImeProf, sAkadGod, sBrojPred, sBrojLV;
+    private  Button oBtnPocetna;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summary);
 
-        textViewImePrez = (TextView) findViewById(R.id.textViewImePrez);
-        textViewKolegij = (TextView) findViewById(R.id.editTextKolegij2);
-
         final Bundle oBundle = getIntent().getExtras();
-        sImePrezime = oBundle.getString("imePrezime");
-        textViewImePrez.setText(sImePrezime);;
-        sKolegij = oBundle.getString("kolegij");
-        textViewKolegij.setText(sKolegij);
+        sIme = oBundle.getString("ime");
+        sPrezime = oBundle.getString("prezime");
+        sDatum = oBundle.getString("datum");
+        sImeProf = oBundle.getString("imeProf");
+        sAkadGod = oBundle.getString("akadGod");
+        sBrojPred = oBundle.getString("brojPred");
+        sBrojLV = oBundle.getString("brojLv");
 
-        btnPocetna = (Button)findViewById(R.id.btnPocetna);
-        btnPocetna.setOnClickListener(new View.OnClickListener() {
+        viewImePrezime = (TextView) findViewById(R.id.viewImePrez);
+        viewDatum = (TextView) findViewById(R.id.viewDatum);
+        viewImeProf = (TextView) findViewById(R.id.viewProf);
+        viewAkadGod = (TextView) findViewById(R.id.viewAkaGod);
+        viewBrojPred = (TextView) findViewById(R.id.viewBrojPred);
+        viewBrojLV = (TextView) findViewById(R.id.viewBrojLV);
+
+        viewImePrezime.setText(sIme+" "+sPrezime);
+        viewDatum.setText(sDatum);
+        viewImeProf.setText(sImeProf);
+        viewAkadGod.setText(sAkadGod);
+        viewBrojPred.setText(sBrojPred);
+        viewBrojLV.setText(sBrojLV);
+
+        oBtnPocetna = (Button) findViewById(R.id.btnDalje);
+        oBtnPocetna.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent PeronalInfo = new Intent(getApplicationContext(), PersonalInfoActivity.class);
-                PeronalInfo.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(PeronalInfo);
+                Intent oPersonalInfoActivity = new Intent(SummaryActivity.this, PersonalInfoActivity.class);
+                oPersonalInfoActivity.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(oPersonalInfoActivity);
             }
         });
     }
