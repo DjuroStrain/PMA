@@ -9,8 +9,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class SummaryActivity extends AppCompatActivity {
-    private TextView viewImePrezime, viewDatum, viewImeProf, viewAkadGod, viewBrojPred, viewBrojLV;
-    private String sIme, sPrezime, sDatum, sImeProf, sAkadGod, sBrojPred, sBrojLV;
+    private TextView viewImePrezime, viewDatum, viewImeProf, viewAkadGod, viewBrojPred, viewBrojLV, viewPredmet;
+    private String sIme, sPrezime, sDatum, sImeProf, sAkadGod, sBrojPred, sBrojLV, sPredmet;
     private  Button oBtnPocetna;
 
     @Override
@@ -26,6 +26,8 @@ public class SummaryActivity extends AppCompatActivity {
         sAkadGod = oBundle.getString("akadGod");
         sBrojPred = oBundle.getString("brojPred");
         sBrojLV = oBundle.getString("brojLv");
+        sPredmet = oBundle.getString("predmet");
+
 
         viewImePrezime = (TextView) findViewById(R.id.viewImePrez);
         viewDatum = (TextView) findViewById(R.id.viewDatum);
@@ -33,6 +35,7 @@ public class SummaryActivity extends AppCompatActivity {
         viewAkadGod = (TextView) findViewById(R.id.viewAkaGod);
         viewBrojPred = (TextView) findViewById(R.id.viewBrojPred);
         viewBrojLV = (TextView) findViewById(R.id.viewBrojLV);
+        viewPredmet = (TextView) findViewById(R.id.viewPredmet);
 
         viewImePrezime.setText(sIme+" "+sPrezime);
         viewDatum.setText(sDatum);
@@ -40,14 +43,19 @@ public class SummaryActivity extends AppCompatActivity {
         viewAkadGod.setText(sAkadGod);
         viewBrojPred.setText(sBrojPred);
         viewBrojLV.setText(sBrojLV);
+        viewPredmet.setText(sPredmet);
+
+
 
         oBtnPocetna = (Button) findViewById(R.id.btnDalje);
         oBtnPocetna.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent oPersonalInfoActivity = new Intent(SummaryActivity.this, PersonalInfoActivity.class);
-                oPersonalInfoActivity.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(oPersonalInfoActivity);
+                Intent oListActivity = new Intent(SummaryActivity.this, ListActivity.class);
+                DataHolder dataHolder = DataHolder.getInstance();
+                dataHolder.objectList.add(new Student(sIme, sPrezime, sPredmet));
+                oListActivity.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(oListActivity);
             }
         });
     }

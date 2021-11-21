@@ -1,3 +1,21 @@
 <resources>
+    <string name="button">DALJE</string>
     <string name="app_name">LV1_faks</string>
+    <string name="ime">Ime studenta</string>
+    <string name="prezime">Prezime studenta</string>
+    <string name="datum">Datum rođenja</string>
+    <string name="unesiDatum">Unesi datum rođenja</string>
+    <string name="imeProf">Ime profesora</string>
+    <string name="akadGod">Akademska godina</string>
+    <string name="brojPred">Broj sati predavanja</string>
+    <string name="brojLv">Broj sati LV-a</string>
+    <string name="unesiImeProf">Unesi ime profesora</string>
+    <string name="unesiAkadGod">Unesite akademsku godina</string>
+    <string name="unesiBrojPred">Unesite broj sati predavanja</string>
+    <string name="unesiBrojLv">Unesite broj sati LV-a</string>
+    <string name="imePrez">Ime i prezime</string>
+    <string name="predmet">Predmet</string>
+    <string name="unesiPredmet">Unesi predmet</string>
+    <string name="novi">Novi</string>
+    <string name="imeIprezime">Ime i prezime studenta</string>
 </resources>

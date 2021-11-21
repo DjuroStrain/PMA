@@ -13,6 +13,7 @@ public class StudentInfoActivity extends AppCompatActivity {
     private EditText oEditTextAkadGod;
     private EditText oEditTextBrojPred;
     private EditText oEditTextBrojLV;
+    private EditText oEditTextPredmet;
     private Button oBtnDalje;
     private String sIme;
     private String sPrezime;
@@ -33,6 +34,8 @@ public class StudentInfoActivity extends AppCompatActivity {
         oEditTextAkadGod = (EditText) findViewById(R.id.editTextAkadGod);
         oEditTextBrojPred = (EditText) findViewById(R.id.editTextPred);
         oEditTextBrojLV = (EditText) findViewById(R.id.editTextLv);
+        oEditTextPredmet = (EditText) findViewById(R.id.editTextPredmet);
+
 
         oBtnDalje = (Button) findViewById(R.id.btnDalje);
         oBtnDalje.setOnClickListener(new View.OnClickListener() {
@@ -46,6 +49,7 @@ public class StudentInfoActivity extends AppCompatActivity {
                 oSummaryActivty.putExtra("akadGod", oEditTextAkadGod.getText().toString());
                 oSummaryActivty.putExtra("brojPred", oEditTextBrojPred.getText().toString());
                 oSummaryActivty.putExtra("brojLv", oEditTextBrojLV.getText().toString());
+                oSummaryActivty.putExtra("predmet", oEditTextPredmet.getText().toString());
                 startActivity(oSummaryActivty);
             }
         });

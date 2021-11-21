@@ -4,9 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/durob/AndroidStudioProjects/LV1_faks/app/src/main/res/layout/activity_main.xml" value="0.266304347826087" />
+        <entry key="..\:/Users/durob/AndroidStudioProjects/PMA/app/src/main/res/layout/activity_list.xml" value="0.2546875" />
         <entry key="..\:/Users/durob/AndroidStudioProjects/PMA/app/src/main/res/layout/activity_main.xml" value="0.2210144927536232" />
         <entry key="..\:/Users/durob/AndroidStudioProjects/PMA/app/src/main/res/layout/activity_student_info.xml" value="0.2210144927536232" />
-        <entry key="..\:/Users/durob/AndroidStudioProjects/PMA/app/src/main/res/layout/activity_summary.xml" value="0.13958333333333334" />
+        <entry key="..\:/Users/durob/AndroidStudioProjects/PMA/app/src/main/res/layout/activity_summary.xml" value="0.2754782700075322" />
+        <entry key="..\:/Users/durob/AndroidStudioProjects/PMA/app/src/main/res/layout/header_view_holder.xml" value="0.26875" />
+        <entry key="..\:/Users/durob/AndroidStudioProjects/PMA/app/src/main/res/layout/student_view_holder.xml" value="0.26875" />
       </map>
     </option>
   </component>
