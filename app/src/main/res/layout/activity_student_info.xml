@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    tools:context=".StudentInfoActivity">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/vuv_hr_image"
+        tools:ignore="MissingConstraints" />
+
+
+    <View
+        android:id="@+id/line1"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c0c0c0"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewImeProf"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/line1"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginTop="16dp"
+        android:text="@string/imeProf"
+        android:gravity="center"
+        android:textSize="8pt"
+        />
+
+    <EditText
+        android:id="@+id/editTextImeProf"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="8pt"
+        android:hint="@string/unesiImeProf"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line1"
+        app:layout_constraintLeft_toRightOf="@+id/textViewImeProf"
+        />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c0c0c0"
+        app:layout_constraintTop_toBottomOf="@id/editTextImeProf"
+        android:layout_marginTop="16dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewGod"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/line2"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginTop="16dp"
+        android:text="@string/akadGod"
+        android:gravity="center"
+        android:textSize="8pt"
+        />
+
+    <EditText
+        android:id="@+id/editTextAkadGod"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="7pt"
+        android:hint="@string/unesiAkadGod"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line2"
+        app:layout_constraintLeft_toRightOf="@+id/textViewGod"
+        />
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c0c0c0"
+        app:layout_constraintTop_toBottomOf="@id/editTextAkadGod"
+        android:layout_marginTop="16dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewPredmet"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/line3"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginTop="16dp"
+        android:text="@string/predmet"
+        android:gravity="center"
+        android:textSize="8pt"
+        />
+
+    <EditText
+        android:id="@+id/editTextPredmet"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="7pt"
+        android:hint="@string/unesiPredmet"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line3"
+        app:layout_constraintLeft_toRightOf="@+id/textViewGod"
+        />
+
+    <View
+        android:id="@+id/line4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c0c0c0"
+        app:layout_constraintTop_toBottomOf="@id/editTextPredmet"
+        android:layout_marginTop="16dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewPred"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/line4"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginTop="16dp"
+        android:text="@string/brojPred"
+        android:gravity="center"
+        android:textSize="8pt"
+        />
+
+    <EditText
+        android:id="@+id/editTextPred"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="8pt"
+        android:hint="@string/unesiBrojPred"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line4"
+        app:layout_constraintLeft_toRightOf="@+id/textViewGod"
+        />
+
+    <View
+        android:id="@+id/line5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c0c0c0"
+        app:layout_constraintTop_toBottomOf="@id/editTextPred"
+        android:layout_marginTop="16dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewLv"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/line5"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginTop="16dp"
+        android:text="@string/brojLv"
+        android:gravity="center"
+        android:textSize="8pt"
+        />
+
+    <EditText
+        android:id="@+id/editTextLv"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="8pt"
+        android:hint="@string/unesiBrojLv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line5"
+        app:layout_constraintLeft_toRightOf="@+id/textViewGod"
+        />
+
+    <View
+        android:id="@+id/line6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c0c0c0"
+        app:layout_constraintTop_toBottomOf="@id/editTextPredmet"
+        android:layout_marginTop="16dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnDalje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="DALJE"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
