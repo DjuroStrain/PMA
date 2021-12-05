@@ -42,7 +42,7 @@
         android:textSize="8pt"
         />
 
-    <EditText
+    <Spinner
         android:id="@+id/editTextImeProf"
         android:layout_width="0dp"
         android:layout_height="50dp"
@@ -114,7 +114,20 @@
         android:textSize="8pt"
         />
 
-    <EditText
+<!--    <EditText-->
+<!--        android:id="@+id/editTextPredmet"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        android:textSize="7pt"-->
+<!--        android:hint="@string/unesiPredmet"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/line3"-->
+<!--        app:layout_constraintLeft_toRightOf="@+id/textViewGod"-->
+<!--        />-->
+
+    <Spinner
         android:id="@+id/editTextPredmet"
         android:layout_width="0dp"
         android:layout_height="50dp"

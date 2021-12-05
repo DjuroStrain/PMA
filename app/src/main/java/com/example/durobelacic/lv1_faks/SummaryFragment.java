@@ -65,6 +65,7 @@ public class SummaryFragment extends Fragment {
         });
 
         pageViewModel.getImeProf().observe(getViewLifecycleOwner(), item -> {
+            if(item.toString() != "Odaberite profesora")
             imeProf.setText(item);
         });
 
@@ -73,6 +74,7 @@ public class SummaryFragment extends Fragment {
         });
 
         pageViewModel.getPredmet().observe(getViewLifecycleOwner(), item -> {
+            if(item.toString() != "Odaberite predmet")
             predmet.setText(item);
         });
 

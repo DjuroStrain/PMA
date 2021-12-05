@@ -5,7 +5,7 @@
     <string name="prezime">Prezime studenta</string>
     <string name="datum">Datum rođenja</string>
     <string name="unesiDatum">Unesi datum rođenja</string>
-    <string name="imeProf">Ime profesora</string>
+    <string name="imeProf">Profesor</string>
     <string name="akadGod">Akademska godina</string>
     <string name="brojPred">Broj sati predavanja</string>
     <string name="brojLv">Broj sati LV-a</string>
